@@ -6,7 +6,7 @@
 /*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:14:39 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 20:25:45 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/08 21:40:15 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ void	move_right(t_game *g)
 	int	i;
 	int	j;
 
-	i = g->player.pos.y;
-	j = g->player.pos.x;
+	i = g->player.pos.x;
+	j = g->player.pos.y;
 	if (g->map.map[i][j + 1] != wall)
 	{
 		g->player.nb_moves++;

@@ -6,7 +6,7 @@
 /*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:06:33 by mmosca            #+#    #+#             */
-/*   Updated: 2023/03/08 20:53:46 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/08 21:25:42 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,12 @@ int	main(int ac, char **av)
 	if (check_arguments(ac, av) == false)
 		return (1);
 	parsing(&game, av[1]);
-	// init_mlx(&game);
-	// display_floor(&game);
-	// display_map(&game);
-	// mlx_key_hook(&game.window, key_press, &game);
-	// mlx_hook(game.window, 17, 1L << 17, clean, &game);
-	// mlx_loop(game.mlx);
+	init_mlx(&game);
+	display_floor(&game);
+	display_map(&game);
+	mlx_key_hook(game.window, key_press, &game);
+	mlx_hook(game.window, 17, 1L << 17, clean, &game);
+	mlx_loop(game.mlx);
 	clean(&game);
 	return (0);
 }
