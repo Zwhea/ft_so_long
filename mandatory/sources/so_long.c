@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:06:33 by mmosca            #+#    #+#             */
-/*   Updated: 2023/03/08 21:25:42 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/09 10:36:53 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,21 @@ int	key_press(t_keycode key_code, t_game *g)
 		g->press.a = true;
 		move_left(g);
 	}
-	else if (key_code == d_key)
-	{
-		g->press.d = true;
-		move_right(g);
-	}
-	else if (key_code == w_key)
-	{
-		g->press.w = true;
-		move_up(g);
-	}
-	else if (key_code == s_key)
-	{
-		g->press.s = true;
-		move_down(g);
-	}
+	// else if (key_code == d_key)
+	// {
+	// 	g->press.d = true;
+	// 	move_right(g);
+	// }
+	// else if (key_code == w_key)
+	// {
+	// 	g->press.w = true;
+	// 	move_up(g);
+	// }
+	// else if (key_code == s_key)
+	// {
+	// 	g->press.s = true;
+	// 	move_down(g);
+	// }
 	return (0);
 }
 
