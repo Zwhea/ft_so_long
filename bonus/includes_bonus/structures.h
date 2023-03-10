@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structures.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:15:06 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 19:17:17 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 14:11:17 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 typedef struct s_sprite		t_sprite;
 typedef struct s_vec2i		t_vec2i;
 typedef struct s_player		t_player;
+typedef struct s_slime		t_slime;
 typedef struct s_press		t_press;
 typedef struct s_map_error	t_map_error;
 typedef struct s_map_items	t_map_items;
@@ -45,8 +46,13 @@ struct s_vec2i
 struct s_player
 {
 	t_vec2i		pos;
-	t_vec2i		print_pos;
 	int			nb_moves;
+};
+
+struct s_slimes
+{
+	t_vec2i		pos;
+	int			slime;
 };
 
 struct s_press
@@ -74,14 +80,19 @@ struct s_map_items
 	int			invalid_characters;
 };
 
-// voir t_t_walls
-// grass, collectible_close, collectible_open, exit_open, exit_close, won
-// link, link_close_one, link_close_all, link_collect, link_exit
 struct s_textures
 {
 	t_sprite	walls[NB_SPRITES_WALL];
 	t_sprite	items[NB_SPRITES_ITEMS];
+	t_sprite	slime[NB_SPRITES_ITEMS];
 	t_sprite	link[NB_SPRITES_LINK];
+	t_sprite	link_idles[NB_SPRITES_LINK];
+	t_sprite	link_idles_left[NB_SPRITES_LINK];
+	t_sprite	link_idles_right[NB_SPRITES_LINK];
+	t_sprite	link_idles_hurt[NB_SPRITES_LINK];
+	t_sprite	link_idles_left_hurt[NB_SPRITES_LINK];
+	t_sprite	link_idles_right_hurt[NB_SPRITES_LINK];
+	t_sprite	link_idles_up_hurt[NB_SPRITES_LINK];
 	t_vec2i		size;
 };
 

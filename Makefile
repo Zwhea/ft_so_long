@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+         #
+#    By: twang <twang@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 19:17:58 by wangthea          #+#    #+#              #
-#    Updated: 2023/03/10 12:03:54 by wangthea         ###   ########.fr        #
+#    Updated: 2023/03/10 12:12:25 by twang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 include mandatory/config/headers.mk
 include mandatory/config/sources.mk
-# include bonus/config_bonus/headers_bonus.mk
-# include bonus/config_bonus/sources_bonus.mk
+include bonus/config_bonus/headers_bonus.mk
+include bonus/config_bonus/sources_bonus.mk
 
 #--variables-------------------------------------------------------------------#
 

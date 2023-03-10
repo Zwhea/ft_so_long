@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structures.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:15:06 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 19:17:17 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 12:18:33 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ struct s_vec2i
 struct s_player
 {
 	t_vec2i		pos;
-	t_vec2i		print_pos;
 	int			nb_moves;
 };
 
@@ -74,9 +73,6 @@ struct s_map_items
 	int			invalid_characters;
 };
 
-// voir t_t_walls
-// grass, collectible_close, collectible_open, exit_open, exit_close, won
-// link, link_close_one, link_close_all, link_collect, link_exit
 struct s_textures
 {
 	t_sprite	walls[NB_SPRITES_WALL];

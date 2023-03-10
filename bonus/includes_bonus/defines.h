@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   defines.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:17:24 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 20:42:38 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 15:27:15 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define NB_SPRITES_WALL 28
 # define NB_SPRITES_ITEMS 7
 # define NB_SPRITES_LINK 6
+# define NB_SPRITES_HEART 3
 
 /*==paths to xpm files========================================================*/
 
@@ -36,15 +37,48 @@
 # define XPM_EXIT "./assets/textures/xpm/items/exit_closed.xpm"
 # define XPM_EXIT_OPEN "./assets/textures/xpm/items/exit_open.xpm"
 # define XPM_WIN "./assets/textures/xpm/items/win.xpm"
+# define XPM_LOSE "./assets/textures/xpm/items/lose.xpm"
+# define XPM_ONE_HEART "./assets/textures/xpm/items/one_heart.xpm"
+# define XPM_TWO_HEARTS "./assets/textures/xpm/items/two_hearts.xpm"
+# define XPM_FULL_HEARTS "./assets/textures/xpm/items/full_heart.xpm"
 
 /*--player--------------------------------------------------------------------*/
 
-# define XPM_LINK "./assets/textures/xpm/link/idles/link00.xpm"
-# define XPM_LINK_LEFT "./assets/textures/xpm/link/idles/link_left00.xpm"
-# define XPM_LINK_RIGHT "./assets/textures/xpm/link/idles/link_right00.xpm"
+/*--hurt--------------------------------------------------------------------*/
+
+# define XPM_LINK_HURT "./assets/textures/xpm/link/hurt/link_down_hurt.xpm"
+# define XPM_LINK_LEFT_HURT "./assets/textures/xpm/link/hurt/link_left_hurt.xpm"
+# define XPM_LINK_RIGHT_HURT "./assets/textures/xpm/link/hurt/link_right_hurt.xpm"
+# define XPM_LINK_UP_HURT "./assets/textures/xpm/link/hurt/link_up_hurt.xpm"
+
+/*--idles--------------------------------------------------------------------*/
+
 # define XPM_LINK_BACK "./assets/textures/xpm/link/idles/link_back.xpm"
+# define XPM_LINK_LEFT_00 "./assets/textures/xpm/link/idles/link_left00.xpm"
+# define XPM_LINK_LEFT_01 "./assets/textures/xpm/link/idles/link_left01.xpm"
+# define XPM_LINK_LEFT_02 "./assets/textures/xpm/link/idles/link_left02.xpm"
+# define XPM_RIGHT_00 "./assets/textures/xpm/link/idles/link_right00.xpm"
+# define XPM_RIGHT_01 "./assets/textures/xpm/link/idles/link_right01.xpm"
+# define XPM_RIGHT_02 "./assets/textures/xpm/link/idles/link_right02.xpm"
+# define XPM_LINK_00 "./assets/textures/xpm/link/idles/link00.xpm"
+# define XPM_LINK_01 "./assets/textures/xpm/link/idles/link01.xpm"
+# define XPM_LINK_02 "./assets/textures/xpm/link/idles/link02.xpm"
+
+/*--on items--------------------------------------------------------------------*/
+
 # define XPM_LINK_COLLECT "./assets/textures/xpm/link/on_items/link_collect.xpm"
 # define XPM_LINK_EXIT "./assets/textures/xpm/link/on_items/link_exit.xpm"
+
+/*----------------------------------------------------------------------------*/
+
+/*--slimes--------------------------------------------------------------------*/
+
+# define XPM_SLIME_00 "./assets/textures/xpm/link/slimes/slime00.xpm"
+# define XPM_SLIME_01 "./assets/textures/xpm/link/slimes/slime01.xpm"
+# define XPM_SLIME_02 "./assets/textures/xpm/link/slimes/slime02.xpm"
+# define XPM_SLIME_03 "./assets/textures/xpm/link/slimes/slime03.xpm"
+# define XPM_SLIME_04 "./assets/textures/xpm/link/slimes/slime04.xpm"
+# define XPM_SLIME_05 "./assets/textures/xpm/link/slimes/slime05.xpm"
 
 /*--walls---------------------------------------------------------------------*/
 

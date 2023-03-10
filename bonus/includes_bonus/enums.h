@@ -6,7 +6,7 @@
 /*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:17:29 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/09 20:13:20 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/08 19:17:31 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ enum e_tile_char
 	collectible			= 'C',
 	collectible_open	= 'c',
 	player				= 'P',
-	slime				= 'S',
 	exit_game			= 'E'
 };
 
@@ -58,20 +57,15 @@ enum e_textures_items
 	txtr_collectible_open,
 	txtr_exit,
 	txtr_exit_open,
-	txtr_won,
-	txtr_lose
+	txtr_won
 };
 
 enum e_textures_link
 {
 	txtr_link,
-	txtr_link_hurt,
 	txtr_link_left,
-	txtr_link_left_hurt,
 	txtr_link_right,
-	txtr_link_right_hurt,
 	txtr_link_back,
-	txtr_link_back_hurt,
 	txtr_link_collect,
 	txtr_link_exit
 };

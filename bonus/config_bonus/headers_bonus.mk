@@ -1,18 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    headers_bonus.mk                                   :+:      :+:    :+:    #
+#    headers.mk                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+         #
+#    By: twang <twang@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/07 19:33:16 by wangthea          #+#    #+#              #
-#    Updated: 2023/03/09 20:09:59 by wangthea         ###   ########.fr        #
+#    Updated: 2023/03/10 12:57:36 by twang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-HEADERS_BONUS =	bonus/includes/defines.h								\
-				bonus/includes/enums.h									\
-				bonus/includes/prototypes.h								\
-				bonus/includes/so_long.h								\
-				bonus/includes/structures.h								\
-				bonus/includes/verboses.h	
+HEADERS_BONUS =	bonus/includes_bonus/defines.h									\
+				bonus/includes_bonus/enums.h										\
+				bonus/includes_bonus/prototypes.h									\
+				bonus/includes_bonus/so_long.h									\
+				bonus/includes_bonus/structures.h									\
+				bonus/includes_bonus/verboses.h	
