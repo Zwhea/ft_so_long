@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:15:06 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 14:11:17 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/10 16:48:09 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,18 +49,18 @@ struct s_player
 	int			nb_moves;
 };
 
-struct s_slimes
+struct s_slime
 {
-	t_vec2i		pos;
+	t_vec2i		*pos;
 	int			slime;
 };
 
 struct s_press
 {
-	bool		a;
-	bool		d;
-	bool		s;
-	bool		w;
+	bool		left;
+	bool		right;
+	bool		down;
+	bool		up;
 };
 
 struct s_map_error
@@ -76,6 +76,7 @@ struct s_map_items
 {
 	int			collectibles;
 	int			players;
+	int			slimes;
 	int			exits;
 	int			invalid_characters;
 };
@@ -85,7 +86,7 @@ struct s_textures
 	t_sprite	walls[NB_SPRITES_WALL];
 	t_sprite	items[NB_SPRITES_ITEMS];
 	t_sprite	slime[NB_SPRITES_ITEMS];
-	t_sprite	link[NB_SPRITES_LINK];
+	t_sprite	link[NB_SPRITES_LINK_ITEMS];
 	t_sprite	link_idles[NB_SPRITES_LINK];
 	t_sprite	link_idles_left[NB_SPRITES_LINK];
 	t_sprite	link_idles_right[NB_SPRITES_LINK];
@@ -110,6 +111,7 @@ struct s_game
 {
 	t_textures	textures;
 	t_player	player;
+	t_slime		slime;
 	t_map		map;
 	t_press		press;
 	t_vec2i		window_size;

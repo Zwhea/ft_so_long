@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   enums.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:17:29 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 19:17:31 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 17:22:02 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ enum e_tile_char
 	wall				= '1',
 	collectible			= 'C',
 	collectible_open	= 'c',
+	slime				= 'S',
 	player				= 'P',
 	exit_game			= 'E'
 };
@@ -57,17 +58,15 @@ enum e_textures_items
 	txtr_collectible_open,
 	txtr_exit,
 	txtr_exit_open,
-	txtr_won
+	txtr_won,
+	txtr_lose
 };
 
 enum e_textures_link
 {
-	txtr_link,
-	txtr_link_left,
-	txtr_link_right,
-	txtr_link_back,
 	txtr_link_collect,
-	txtr_link_exit
+	txtr_link_exit,
+	txtr_link_back
 };
 
 enum e_textures_walls

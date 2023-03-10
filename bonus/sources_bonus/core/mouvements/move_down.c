@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_down.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:14:49 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/09 19:55:21 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 16:48:34 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void	down_tile_is_space(t_game *g, int x, int y)
 {
 	check_tiles(g, x, y);
 	g->player.pos.y++;
-	display_image_in_map(g, g->textures.link[txtr_link].sprite, x, y + 1);
+	display_image_in_map(g, g->textures.link_idles[0].sprite, x, y + 1);
 }
 
 void	move_down(t_game *g)

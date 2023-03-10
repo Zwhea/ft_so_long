@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:17:24 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 15:27:15 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/10 17:21:27 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define NB_SPRITES_WALL 28
 # define NB_SPRITES_ITEMS 7
 # define NB_SPRITES_LINK 6
+# define NB_SPRITES_LINK_ITEMS 3
 # define NB_SPRITES_HEART 3
 
 /*==paths to xpm files========================================================*/

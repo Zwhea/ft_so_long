@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prototypes.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:16:58 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/09 18:54:57 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 16:42:51 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,5 +115,6 @@ void	check_tiles(t_game *g, int x, int y);
 void	set_vec2i(t_vec2i *vector, int x, int y);
 bool	is_valid_char(char c);
 void	fill_map_items(t_game *g);
+void    fill_map_enemies(t_game *g);
 
 #endif // PROTOTYPES_H

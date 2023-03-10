@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:12:14 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/09 19:10:10 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 16:08:01 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	set_vec2i(t_vec2i *vector, int x, int y)
 bool	is_valid_char(char c)
 {
 	if (c == space || c == wall || c == collectible || c == exit_game \
-		|| c == player)
+		|| c == player || c == slime)
 		return (true);
 	return (false);
 }
@@ -45,6 +45,8 @@ static void	set_number_of_items(t_game *g, char c)
 		g->map.items.collectibles++;
 	else if (c == exit_game)
 		g->map.items.exits++;
+	else if (c == slime)
+		g->map.items.slimes++;
 	else if (is_valid_char(c) == false)
 		g->map.items.invalid_characters++;
 }
@@ -65,9 +67,6 @@ void	fill_map_items(t_game *g)
 				set_vec2i(&g->player.pos, x, y);
 			else if (g->map.map[y][x] == exit_game)
 				set_vec2i(&g->map.exit_pos, x, y);
-			// else if (g->map == enemie)
-				// set_vec2i(&g->map.enemies[index].pos, x, y);
-				// index++;
 			x++;
 		}
 		y++;
