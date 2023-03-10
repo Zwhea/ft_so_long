@@ -6,7 +6,7 @@
 /*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:14:39 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/09 19:24:45 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 19:59:36 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void	right_tile_is_space(t_game *g, int x, int y)
 {
 	check_tiles(g, x, y);
 	g->player.pos.x++;
-	display_image_in_map(g, g->textures.link[txtr_link_right].sprite, x + 1, y);
+	display_image_in_map(g, g->textures.link_idles_right[0].sprite, x + 1, y);
 }
 
 void	move_right(t_game *g)

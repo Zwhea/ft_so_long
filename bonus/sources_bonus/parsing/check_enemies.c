@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_enemies                                      :+:      :+:    :+:   */
+/*   check_enemies.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 16:07:11 by twang             #+#    #+#             */
-/*   Updated: 2023/03/10 16:12:40 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/10 20:23:54 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,9 @@ void	fill_map_enemies(t_game *g)
 		x = 0;
 		while (x < g->map.size.x)
 		{
-			else if (g->map[y][x] == slime)
+			if (g->map.map[y][x] == slime)
 			{
-				set_vec2i(&g->map.slime[index].pos, x, y);
-                ft_dprintf(2, BLUE"index : %d\n"END, index);
-                ft_dprintf(2, BLUE"pos.x : %d\n"END, g->map.slime[index].pos.x);
-                ft_dprintf(2, BLUE"pos.y : %d\n"END, g->map.slime[index].pos.y);
+				set_vec2i(&g->slime.pos[index], x, y);
 				index++;
 			}
 			x++;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   link.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:12:54 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 17:15:11 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/10 19:54:17 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ static void	init_xpm_link_on_items(t_game *g)
 void	init_xpm_link(t_game *g)
 {
 	init_xpm_link_on_items(g);
-	init_xpm_link_hurt(t_game *g);
+	init_xpm_link_hurt(g);
+	init_xpm_link_idles(g);
 }

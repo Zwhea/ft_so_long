@@ -6,7 +6,7 @@
 /*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:28 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 21:17:09 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 19:00:34 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	init_struct(t_game *g)
 	ft_memset(g, 0, sizeof(t_game));
 	ft_memset(&g->map, 0, sizeof(t_map));
 	ft_memset(&g->player, 0, sizeof(t_player));
+	ft_memset(&g->slime, 0, sizeof(t_slime));
 	ft_memset(&g->map.error, 1, sizeof(t_map_error));
 	ft_memset(&g->textures, 0, sizeof(t_textures));
 	ft_memset(&g->press, 0, sizeof(t_press));

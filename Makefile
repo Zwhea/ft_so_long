@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: twang <twang@student.42.fr>                +#+  +:+       +#+         #
+#    By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 19:17:58 by wangthea          #+#    #+#              #
-#    Updated: 2023/03/10 12:12:25 by twang            ###   ########.fr        #
+#    Updated: 2023/03/10 20:46:30 by wangthea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -109,7 +109,7 @@ libs:
 	$(MAKE) -C $(MLX_DIR)
 
 debug:
-	$(MAKE) re DEBUG=yes
+	$(MAKE) re DEBUG=yes BONUS=yes
 	
 bonus:
 	$(MAKE) re BONUS=yes

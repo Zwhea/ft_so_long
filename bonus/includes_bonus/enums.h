@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   enums.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:17:29 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 17:22:02 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/10 19:51:21 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,10 @@ enum e_textures_items
 	txtr_exit,
 	txtr_exit_open,
 	txtr_won,
-	txtr_lose
+	txtr_lose,
+	txtr_one_heart,
+	txtr_two_hearts,
+	txtr_full_hearts
 };
 
 enum e_textures_link

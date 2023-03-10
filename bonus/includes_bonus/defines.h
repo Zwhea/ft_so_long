@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   defines.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:17:24 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 17:21:27 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/10 20:48:55 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 /*==number sprites textures===================================================*/
 
 # define NB_SPRITES_WALL 28
-# define NB_SPRITES_ITEMS 7
+# define NB_SPRITES_ITEMS 10
 # define NB_SPRITES_LINK 6
 # define NB_SPRITES_LINK_ITEMS 3
 # define NB_SPRITES_HEART 3
@@ -58,9 +58,9 @@
 # define XPM_LINK_LEFT_00 "./assets/textures/xpm/link/idles/link_left00.xpm"
 # define XPM_LINK_LEFT_01 "./assets/textures/xpm/link/idles/link_left01.xpm"
 # define XPM_LINK_LEFT_02 "./assets/textures/xpm/link/idles/link_left02.xpm"
-# define XPM_RIGHT_00 "./assets/textures/xpm/link/idles/link_right00.xpm"
-# define XPM_RIGHT_01 "./assets/textures/xpm/link/idles/link_right01.xpm"
-# define XPM_RIGHT_02 "./assets/textures/xpm/link/idles/link_right02.xpm"
+# define XPM_LINK_RIGHT_00 "./assets/textures/xpm/link/idles/link_right00.xpm"
+# define XPM_LINK_RIGHT_01 "./assets/textures/xpm/link/idles/link_right01.xpm"
+# define XPM_LINK_RIGHT_02 "./assets/textures/xpm/link/idles/link_right02.xpm"
 # define XPM_LINK_00 "./assets/textures/xpm/link/idles/link00.xpm"
 # define XPM_LINK_01 "./assets/textures/xpm/link/idles/link01.xpm"
 # define XPM_LINK_02 "./assets/textures/xpm/link/idles/link02.xpm"
@@ -74,12 +74,12 @@
 
 /*--slimes--------------------------------------------------------------------*/
 
-# define XPM_SLIME_00 "./assets/textures/xpm/link/slimes/slime00.xpm"
-# define XPM_SLIME_01 "./assets/textures/xpm/link/slimes/slime01.xpm"
-# define XPM_SLIME_02 "./assets/textures/xpm/link/slimes/slime02.xpm"
-# define XPM_SLIME_03 "./assets/textures/xpm/link/slimes/slime03.xpm"
-# define XPM_SLIME_04 "./assets/textures/xpm/link/slimes/slime04.xpm"
-# define XPM_SLIME_05 "./assets/textures/xpm/link/slimes/slime05.xpm"
+# define XPM_SLIME_00 "./assets/textures/xpm/slimes/slime00.xpm"
+# define XPM_SLIME_01 "./assets/textures/xpm/slimes/slime01.xpm"
+# define XPM_SLIME_02 "./assets/textures/xpm/slimes/slime02.xpm"
+# define XPM_SLIME_03 "./assets/textures/xpm/slimes/slime03.xpm"
+# define XPM_SLIME_04 "./assets/textures/xpm/slimes/slime04.xpm"
+# define XPM_SLIME_05 "./assets/textures/xpm/slimes/slime05.xpm"
 
 /*--walls---------------------------------------------------------------------*/
 

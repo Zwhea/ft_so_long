@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structures.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:15:06 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 16:48:09 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/10 20:26:05 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ struct s_slime
 
 struct s_press
 {
-	bool		left;
-	bool		right;
-	bool		down;
-	bool		up;
+	bool		a;
+	bool		d;
+	bool		s;
+	bool		w;
 };
 
 struct s_map_error

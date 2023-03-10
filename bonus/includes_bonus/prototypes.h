@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prototypes.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:16:58 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 16:42:51 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/10 20:44:32 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,11 @@ void	init_xpm_items(t_game *g);
 
 // link.c
 void	init_xpm_link(t_game *g);
+void	init_xpm_link_idles(t_game *g);
+void	init_xpm_link_hurt(t_game *g);
+
+// slime.c
+void	init_xpm_slime(t_game *g);
 
 // walls.c
 void	init_xpm_walls(t_game *g);

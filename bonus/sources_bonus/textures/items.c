@@ -6,7 +6,7 @@
 /*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:01 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 19:13:02 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/10 19:53:26 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,12 @@ void	init_xpm_items(t_game *g)
 	XPM_EXIT_OPEN, &g->textures.size.x, &g->textures.size.y);
 	g->textures.items[txtr_won].sprite = mlx_xpm_file_to_image(g->mlx, \
 	XPM_WIN, &g->textures.size.x, &g->textures.size.y);
+	g->textures.items[txtr_lose].sprite = mlx_xpm_file_to_image(g->mlx, \
+	XPM_LOSE, &g->textures.size.x, &g->textures.size.y);
+	g->textures.items[txtr_one_heart].sprite = mlx_xpm_file_to_image(g->mlx, \
+	XPM_ONE_HEART, &g->textures.size.x, &g->textures.size.y);
+	g->textures.items[txtr_two_hearts].sprite = mlx_xpm_file_to_image(g->mlx, \
+	XPM_TWO_HEARTS, &g->textures.size.x, &g->textures.size.y);
+	g->textures.items[txtr_full_hearts].sprite = mlx_xpm_file_to_image(g->mlx, \
+	XPM_FULL_HEARTS, &g->textures.size.x, &g->textures.size.y);
 }
