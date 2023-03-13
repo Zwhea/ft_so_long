@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_right.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:14:39 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/09 19:24:45 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:32:26 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ static void	right_tile_is_closed_collectible(t_game *g, int x, int y)
 	check_tiles(g, x, y);
 	g->map.map[y][x + 1] = collectible_open;
 	g->player.pos.x++;
-	display_image_in_map(g, g->textures.link[txtr_link_collect].sprite, x + 1, y);
+	display_image_in_map(g, g->textures.link[txtr_link_collect].sprite,
+		x + 1, y);
 	g->map.items.collectibles--;
 	if (g->map.items.collectibles == 0)
 		display_image_in_map(g, g->textures.items[txtr_exit_open].sprite,

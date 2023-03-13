@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structures.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:15:06 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 20:26:05 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/13 12:46:58 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ struct s_player
 {
 	t_vec2i		pos;
 	int			nb_moves;
+	int			nb_lifes;
 };
 
 struct s_slime
@@ -57,10 +58,11 @@ struct s_slime
 
 struct s_press
 {
-	bool		a;
-	bool		d;
-	bool		s;
-	bool		w;
+	bool		left;
+	bool		right;
+	bool		down;
+	bool		up;
+	bool		hurt;
 };
 
 struct s_map_error

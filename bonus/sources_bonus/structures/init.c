@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:28 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 19:00:34 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:29:57 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	init_struct(t_game *g)
 	ft_memset(&g->map.error, 1, sizeof(t_map_error));
 	ft_memset(&g->textures, 0, sizeof(t_textures));
 	ft_memset(&g->press, 0, sizeof(t_press));
+	g->player.nb_lifes = 3;
 	g->end = false;
 }
 

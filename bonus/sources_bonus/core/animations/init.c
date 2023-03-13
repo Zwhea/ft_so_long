@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_enemies.c                                    :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/10 16:07:11 by twang             #+#    #+#             */
-/*   Updated: 2023/03/13 17:25:02 by twang            ###   ########.fr       */
+/*   Created: 2023/03/13 10:34:31 by twang             #+#    #+#             */
+/*   Updated: 2023/03/13 17:20:30 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	fill_map_enemies(t_game *g)
+int	animations(t_game *g)
 {
-	int	x;
-	int	y;
-	int	index;
+	static int	frame;
 
-	y = 0;
-	index = 0;
-	g->slime.pos = ft_calloc(g->map.items.slimes, sizeof(t_vec2i));
-	while (y < g->map.size.y)
+	if (frame % 10000 == 0)
 	{
-		x = 0;
-		while (x < g->map.size.x)
-		{
-			if (g->map.map[y][x] == slime)
-			{
-				set_vec2i(&g->slime.pos[index], x, y);
-				index++;
-			}
-			x++;
-		}
-		y++;
+		animate_static_player(g, frame);
+		if (g->map.items.slimes > 0 && g->player.nb_lifes > 0)
+			animate_static_slimes(g, frame);
 	}
+	frame++;
+	if (frame >= 60000)
+		frame = 0;
+	return (0);
 }

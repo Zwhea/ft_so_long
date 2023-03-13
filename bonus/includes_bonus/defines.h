@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   defines.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:17:24 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 20:48:55 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:28:39 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@
 
 /*--hurt--------------------------------------------------------------------*/
 
-# define XPM_LINK_HURT "./assets/textures/xpm/link/hurt/link_down_hurt.xpm"
-# define XPM_LINK_LEFT_HURT "./assets/textures/xpm/link/hurt/link_left_hurt.xpm"
-# define XPM_LINK_RIGHT_HURT "./assets/textures/xpm/link/hurt/link_right_hurt.xpm"
-# define XPM_LINK_UP_HURT "./assets/textures/xpm/link/hurt/link_up_hurt.xpm"
+# define XPM_LINK_HURT "./assets/textures/xpm/link/hurt/link_down.xpm"
+# define XPM_LINK_LEFT_HURT "./assets/textures/xpm/link/hurt/link_left.xpm"
+# define XPM_LINK_RIGHT_HURT "./assets/textures/xpm/link/hurt/link_right.xpm"
+# define XPM_LINK_UP_HURT "./assets/textures/xpm/link/hurt/link_up.xpm"
 
 /*--idles--------------------------------------------------------------------*/
 
@@ -65,7 +65,7 @@
 # define XPM_LINK_01 "./assets/textures/xpm/link/idles/link01.xpm"
 # define XPM_LINK_02 "./assets/textures/xpm/link/idles/link02.xpm"
 
-/*--on items--------------------------------------------------------------------*/
+/*--on items------------------------------------------------------------------*/
 
 # define XPM_LINK_COLLECT "./assets/textures/xpm/link/on_items/link_collect.xpm"
 # define XPM_LINK_EXIT "./assets/textures/xpm/link/on_items/link_exit.xpm"

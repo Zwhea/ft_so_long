@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 16:56:36 by twang             #+#    #+#             */
-/*   Updated: 2023/03/10 17:14:49 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/13 17:17:49 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,8 @@ static void	init_xpm_link_up_hurt(t_game *g)
 
 void	init_xpm_link_hurt(t_game *g)
 {
-    init_xpm_link_down_hurt(g);
-    init_xpm_link_left_hurt(g);
-    init_xpm_link_right_hurt(g);
-    init_xpm_link_up_hurt(g);
+	init_xpm_link_down_hurt(g);
+	init_xpm_link_left_hurt(g);
+	init_xpm_link_right_hurt(g);
+	init_xpm_link_up_hurt(g);
 }

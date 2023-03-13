@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:12:14 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/09 19:10:10 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:30:36 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,6 @@ void	fill_map_items(t_game *g)
 				set_vec2i(&g->player.pos, x, y);
 			else if (g->map.map[y][x] == exit_game)
 				set_vec2i(&g->map.exit_pos, x, y);
-			// else if (g->map == enemie)
-				// set_vec2i(&g->map.enemies[index].pos, x, y);
-				// index++;
 			x++;
 		}
 		y++;

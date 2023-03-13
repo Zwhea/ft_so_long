@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   link_idles.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 17:15:39 by twang             #+#    #+#             */
-/*   Updated: 2023/03/10 19:54:01 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:17:15 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,9 @@ static void	init_xpm_link_right(t_game *g)
 
 void	init_xpm_link_idles(t_game *g)
 {
-    g->textures.link[txtr_link_back].sprite = mlx_xpm_file_to_image(g->mlx, \
+	g->textures.link[txtr_link_back].sprite = mlx_xpm_file_to_image(g->mlx, \
 	XPM_LINK_BACK, &g->textures.size.x, &g->textures.size.y);
-    init_xpm_link_down(g);
-    init_xpm_link_left(g);
-    init_xpm_link_right(g);
+	init_xpm_link_down(g);
+	init_xpm_link_left(g);
+	init_xpm_link_right(g);
 }
