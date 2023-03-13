@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_map.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:46 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/13 17:30:19 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/13 18:22:41 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ static void	read_error(int fd)
 
 static int	get_allocation_size(t_game *g, const char *file)
 {
-	int	size;
-	int	fd;
-	int	nb_bytes_read;
-	int	c;
+	int			size;
+	int			fd;
+	int			nb_bytes_read;
+	int8_t		c;
 
 	fd = open_file(file);
 	nb_bytes_read = 1;
@@ -45,11 +45,11 @@ static int	get_allocation_size(t_game *g, const char *file)
 
 static char	*fill_map(t_game *g, const char *file)
 {
-	int		i;
-	int		fd;
-	int		nb_bytes_read;
-	int		c;
-	char	*str;
+	int			i;
+	int			fd;
+	int			nb_bytes_read;
+	int8_t		c;
+	char		*str;
 
 	str = ft_calloc(get_allocation_size(g, file) + 1, sizeof(char));
 	if (!str)
