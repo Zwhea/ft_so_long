@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   display_result.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 20:12:23 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/13 17:21:58 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/14 16:03:55 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ static void	display_string_win(t_game *g)
 	i = 1;
 	while (i < width - 1)
 	{
-		mlx_put_image_to_window(g->mlx, g->window,
-			g->textures.items[txtr_grass].sprite, IMG_WIDTH * i,
-			IMG_HEIGHT * (heigth - 1));
+		display_image(g, g->textures.items[txtr_grass].sprite, i, heigth - 1);
 		i++;
 	}
 	mlx_string_put(g->mlx, g->window, ((width * 96) / 2) - 70,
@@ -51,9 +49,7 @@ static void	display_string_lose(t_game *g)
 	i = 1;
 	while (i < width - 1)
 	{
-		mlx_put_image_to_window(g->mlx, g->window,
-			g->textures.items[txtr_grass].sprite, IMG_WIDTH * i,
-			IMG_HEIGHT * (heigth - 1));
+		display_image(g, g->textures.items[txtr_grass].sprite, i, heigth - 1);
 		i++;
 	}
 	mlx_string_put(g->mlx, g->window, ((width * 96) / 2) - 72,

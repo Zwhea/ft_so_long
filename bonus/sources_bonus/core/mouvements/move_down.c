@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_down.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:14:49 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/13 17:08:56 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/14 16:05:15 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	down_tile_is_closed_collectible(t_game *g, int x, int y)
 	g->map.items.collectibles--;
 	if (g->player.nb_lifes < 3)
 		g->player.nb_lifes++;
-	display_hearts(g);
+	display_data(g);
 	if (g->map.items.collectibles == 0)
 		display_image_in_map(g, g->textures.items[txtr_exit_open].sprite, \
 		g->map.exit_pos.x, g->map.exit_pos.y);
@@ -56,8 +56,7 @@ void	down_tile_is_slime(t_game *g, int x, int y)
 	check_tiles(g, x, y);
 	g->player.pos.y++;
 	g->player.nb_lifes--;
-	if (g->map.items.slimes > 0)
-		display_hearts(g);
+	display_data(g);
 	if (g->player.nb_lifes == 0)
 	{
 		g->end = true;

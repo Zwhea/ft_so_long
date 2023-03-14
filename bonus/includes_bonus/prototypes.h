@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prototypes.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:16:58 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/13 17:25:44 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/14 16:04:26 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,7 @@ void	up_tile_is_space(t_game *g, int x, int y);
 /*--render--------------------------------------------------------------------*/
 
 // display_data.c
-void	display_hearts(t_game *g);
-void	display_string_collectibles_left(t_game *g);
-void	display_string_moves(t_game *g);
+void	display_data(t_game *g);
 
 // display_floor.c
 void	display_floor(t_game *g);

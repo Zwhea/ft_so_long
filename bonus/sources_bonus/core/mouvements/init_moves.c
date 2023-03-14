@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_moves.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:40:28 by twang             #+#    #+#             */
-/*   Updated: 2023/03/13 17:23:00 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/14 16:05:05 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ void	move_left(t_game *g)
 	{
 		g->player.nb_moves++;
 		ft_dprintf(1, BLUE"moves count ="END" %d\n", g->player.nb_moves);
-		display_string_moves(g);
-		display_string_collectibles_left(g);
+		display_data(g);
 		if (g->map.map[y][x - 1] == collectible)
 			left_tile_is_closed_collectible(g, x, y);
 		else if (g->map.map[y][x - 1] == collectible_open)
@@ -51,8 +50,7 @@ void	move_right(t_game *g)
 	{
 		g->player.nb_moves++;
 		ft_dprintf(1, BLUE"moves count ="END" %d\n", g->player.nb_moves);
-		display_string_moves(g);
-		display_string_collectibles_left(g);
+		display_data(g);
 		if (g->map.map[y][x + 1] == collectible)
 			right_tile_is_closed_collectible(g, x, y);
 		else if (g->map.map[y][x + 1] == collectible_open)
@@ -78,8 +76,7 @@ void	move_down(t_game *g)
 	{
 		g->player.nb_moves++;
 		ft_dprintf(1, BLUE"moves count ="END" %d\n", g->player.nb_moves);
-		display_string_moves(g);
-		display_string_collectibles_left(g);
+		display_data(g);
 		if (g->map.map[y + 1][x] == collectible)
 			down_tile_is_closed_collectible(g, x, y);
 		else if (g->map.map[y + 1][x] == collectible_open)
@@ -105,8 +102,7 @@ void	move_up(t_game *g)
 	{
 		g->player.nb_moves++;
 		ft_dprintf(1, BLUE"moves count ="END" %d\n", g->player.nb_moves);
-		display_string_moves(g);
-		display_string_collectibles_left(g);
+		display_data(g);
 		if (g->map.map[y - 1][x] == collectible)
 			up_tile_is_closed_collectible(g, x, y);
 		else if (g->map.map[y - 1][x] == collectible_open)

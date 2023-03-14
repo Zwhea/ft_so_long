@@ -3,90 +3,83 @@
 /*                                                        :::      ::::::::   */
 /*   display_data.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:54:53 by twang             #+#    #+#             */
-/*   Updated: 2023/03/13 17:22:23 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/14 16:03:33 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	display_hearts(t_game *g)
+static void	display_hearts(t_game *g)
 {
 	int		width;
 	int		heigth;
-	int		i;
 
-	heigth = g->window_size.y + 96;
-	width = (g->window_size.x / 2) + 38;
-	i = 1;
-	while (i < width - 1)
-	{
-		mlx_put_image_to_window(g->mlx, g->window,
-			g->textures.items[txtr_grass].sprite, IMG_WIDTH * i,
-			IMG_HEIGHT * (heigth - 1));
-		i++;
-	}
+	width = g->map.size.x + 2;
+	heigth = g->map.size.y + 2;
 	if (g->player.nb_lifes == 3)
-		mlx_put_image_to_window(g->mlx, g->window,
-			g->textures.items[txtr_full_hearts].sprite, width, heigth);
-	if (g->player.nb_lifes == 2)
-		mlx_put_image_to_window(g->mlx, g->window,
-			g->textures.items[txtr_two_hearts].sprite, width, heigth);
-	if (g->player.nb_lifes == 1)
-		mlx_put_image_to_window(g->mlx, g->window,
-			g->textures.items[txtr_one_heart].sprite, width, heigth);
+		display_image(g, g->textures.items[txtr_full_hearts].sprite, width / 2,
+			heigth - 1);
+	else if (g->player.nb_lifes == 2)
+		display_image(g, g->textures.items[txtr_two_hearts].sprite, width / 2,
+			heigth - 1);
+	else
+		display_image(g, g->textures.items[txtr_one_heart].sprite, width / 2,
+			heigth - 1);
 }
 
-void	display_string_collectibles_left(t_game *g)
+static void	display_string_collectibles_left(t_game *g)
 {
 	char	*collectibles_left;
 	int		width;
 	int		heigth;
-	int		i;
 
 	collectibles_left = ft_itoa(g->map.items.collectibles);
-	width = g->window_size.x + 2;
-	heigth = g->window_size.y + 2;
-	i = 1;
-	while (i < width - 1)
-	{
-		mlx_put_image_to_window(g->mlx, g->window,
-			g->textures.items[txtr_grass].sprite, IMG_WIDTH * i,
-			IMG_HEIGHT * (heigth - 1));
-		i++;
-	}
-	mlx_string_put(g->mlx, g->window, g->window_size.x - 96,
+	width = g->window_size.x - 2;
+	heigth = g->map.size.y + 2;
+	mlx_string_put(g->mlx, g->window, width - 240,
 		(heigth * 96) - 48, 0xFFFFFF, collectibles_left);
-	mlx_string_put(g->mlx, g->window, g->window_size.x - 80,
+	mlx_string_put(g->mlx, g->window, width - 224,
 		(heigth * 96) - 48, 0xFFFFFF, "Collectibles left");
 	free(collectibles_left);
 	collectibles_left = NULL;
 }
 
-void	display_string_moves(t_game *g)
+static void	display_string_moves(t_game *g)
 {
 	char	*steps;
 	int		width;
 	int		heigth;
-	int		i;
 
 	steps = ft_itoa(g->player.nb_moves);
-	width = g->window_size.x + 2;
-	heigth = g->window_size.y + 2;
-	i = 1;
-	while (i < width - 1)
-	{
-		mlx_put_image_to_window(g->mlx, g->window,
-			g->textures.items[txtr_grass].sprite, IMG_WIDTH * i,
-			IMG_HEIGHT * (heigth - 1));
-		i++;
-	}
-	mlx_string_put(g->mlx, g->window, 144,
+	width = g->map.size.x;
+	heigth = g->map.size.y + 2;
+	mlx_string_put(g->mlx, g->window, width + 96,
 		(heigth * 96) - 48, 0xFFFFFF, "Moves count =");
-	mlx_string_put(g->mlx, g->window, 256,
+	mlx_string_put(g->mlx, g->window, width + 208,
 		(heigth * 96) - 48, 0xFFFFFF, steps);
 	free(steps);
 	steps = NULL;
+}
+
+void	display_data(t_game *g)
+{
+	int		width;
+	int		heigth;
+	int		i;
+
+	width = g->map.size.x + 2;
+	heigth = g->map.size.y + 2;
+	i = 1;
+	while (i < width - 1)
+	{
+		display_image(g, g->textures.items[txtr_grass].sprite, i, heigth - 1);
+		i++;
+	}
+	display_string_moves(g);
+	display_string_collectibles_left(g);
+	if (g->map.items.slimes > 0)
+		display_hearts(g);
 }

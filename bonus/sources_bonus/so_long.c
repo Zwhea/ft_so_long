@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:06:33 by mmosca            #+#    #+#             */
-/*   Updated: 2023/03/13 17:15:01 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/14 16:06:13 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,7 @@ int	main(int ac, char **av)
 	init_mlx(&game);
 	display_floor(&game);
 	display_map(&game);
-	display_string_moves(&game);
-	display_string_collectibles_left(&game);
-	if (game.map.items.slimes > 0)
-		display_hearts(&game);
+	display_data(&game);
 	mlx_key_hook(game.window, key_press, &game);
 	mlx_loop_hook(game.mlx, animations, &game);
 	mlx_hook(game.window, 17, 1L << 17, clean, &game);
