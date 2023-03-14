@@ -6,7 +6,7 @@
 /*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:17:29 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 19:17:31 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/14 16:56:05 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,34 +72,34 @@ enum e_textures_link
 
 enum e_textures_walls
 {
-	txtr_b_bot_left,
-	txtr_b_bot_right,
-	txtr_b_left,
-	txtr_b_left_extr,
-	txtr_b_left_s,
-	txtr_mid_bot,
-	txtr_mid_left,
-	txtr_mid_right,
-	txtr_mid_top,
-	txtr_b_right,
-	txtr_b_right_extr,
-	txtr_right_s,
-	txtr_b_top_left,
-	txtr_b_top_right,
-	txtr_column,
-	txtr_i_bot_extr,
-	txtr_i_bot_left,
-	txtr_i_bot_right,
-	txtr_i_mid_cross,
-	txtr_i_mid_left,
-	txtr_i_mid_right,
-	txtr_i_top_extr,
-	txtr_i_top_left,
-	txtr_i_top_right,
-	txtr_in_wall,
-	txtr_left_extr,
-	txtr_right_extr,
-	txtr_wall
+	b_bot_left,
+	b_bot_right,
+	b_left,
+	b_left_extr,
+	b_left_s,
+	mid_bot,
+	mid_left,
+	mid_right,
+	mid_top,
+	b_right,
+	b_right_extr,
+	right_s,
+	b_top_left,
+	b_top_right,
+	column,
+	i_bot_extr,
+	i_bot_left,
+	i_bot_right,
+	i_mid_cross,
+	i_mid_left,
+	i_mid_right,
+	i_top_extr,
+	i_top_left,
+	i_top_right,
+	in_wall,
+	left_extr,
+	right_extr,
+	walls
 };
 
 # ifndef MACOS

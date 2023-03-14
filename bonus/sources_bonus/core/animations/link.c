@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   link.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 10:37:20 by twang             #+#    #+#             */
-/*   Updated: 2023/03/13 17:19:57 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/14 16:19:20 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ void	animate_static_player(t_game *g, int frame)
 	if (g->map.map[y][x] == space || g->map.map[y][x] == player)
 	{
 		if (g->press.down == true || g->player.nb_moves == 0)
-			display_image_in_map(g,
+			display_img_in_map(g,
 				g->textures.link_idles[frame / 10000].sprite, x, y);
 		else if (g->press.left == true)
-			display_image_in_map(g,
+			display_img_in_map(g,
 				g->textures.link_idles_left[frame / 10000].sprite, x, y);
 		else if (g->press.right == true)
-			display_image_in_map(g,
+			display_img_in_map(g,
 				g->textures.link_idles_right[frame / 10000].sprite, x, y);
 	}
 }

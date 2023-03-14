@@ -6,7 +6,7 @@
 #    By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 19:17:58 by wangthea          #+#    #+#              #
-#    Updated: 2023/03/10 20:46:30 by wangthea         ###   ########.fr        #
+#    Updated: 2023/03/14 17:03:34 by wangthea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -109,10 +109,10 @@ libs:
 	$(MAKE) -C $(MLX_DIR)
 
 debug:
-	$(MAKE) re DEBUG=yes BONUS=yes
+	$(MAKE) re DEBUG=yes
 	
 bonus:
-	$(MAKE) re BONUS=yes
+	$(MAKE) BONUS=yes
 
 #--re, clean & fclean----------------------------------------------------------#
 

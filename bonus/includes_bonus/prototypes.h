@@ -6,7 +6,7 @@
 /*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:16:58 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/14 16:04:26 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/14 16:19:18 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ void	display_map_unsolvable_error(t_game *g);
 
 // mlx.c
 void	display_image(t_game *g, void *image, int x, int y);
-void	display_image_in_map(t_game *g, void *image, int x, int y);
+void	display_img_in_map(t_game *g, void *image, int x, int y);
 
 // print.c
 void	error(void);

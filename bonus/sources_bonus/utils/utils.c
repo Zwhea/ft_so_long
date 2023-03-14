@@ -6,7 +6,7 @@
 /*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:12:14 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 20:50:22 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/14 16:28:44 by wangthea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 void	check_tiles(t_game *g, int x, int y)
 {
 	if (g->map.map[y][x] == collectible_open)
-		display_image_in_map(g, g->textures.items[txtr_collectible_open].sprite,
+		display_img_in_map(g, g->textures.items[txtr_collectible_open].sprite,
 			x, y);
 	else if (g->map.map[y][x] == exit_game)
-		display_image_in_map(g, g->textures.items[txtr_exit].sprite, x, y);
+		display_img_in_map(g, g->textures.items[txtr_exit].sprite, x, y);
 	else if (g->map.map[y][x] == slime)
-		display_image_in_map(g, g->textures.slime[0].sprite, x, y);
+		display_img_in_map(g, g->textures.slime[0].sprite, x, y);
 	else
-		display_image_in_map(g, g->textures.items[txtr_grass].sprite, x, y);
+		display_img_in_map(g, g->textures.items[txtr_grass].sprite, x, y);
 }
 
 void	set_vec2i(t_vec2i *vector, int x, int y)
