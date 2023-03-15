@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:51 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/15 15:07:08 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/15 15:42:08 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	check_map_items(t_game *g)
 		display_map_item_error(g, too_much_exit);
 	if (g->map.items.invalid_characters != 0)
 		display_map_item_error(g, bad_char);
-	if (g->map.items.slimes > (g->map.items.collectibles + g->player.nb_lifes))
+	if (g->map.items.slimes >= (g->map.items.collectibles + g->player.nb_lifes))
 		display_map_item_error(g, too_much_slimes);
 }
 

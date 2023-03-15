@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:46 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/15 15:06:36 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/15 15:29:26 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,16 @@ static void	read_error(int fd)
 
 static int	get_allocation_size(t_game *g, const char *file)
 {
-	int			size;
 	int			fd;
 	int			nb_bytes_read;
+	int			size;
 	int8_t		c;
 
 	fd = open_file(file);
 	nb_bytes_read = 1;
 	size = 0;
-	g->map.size.y = 1;
+	c = 0;
+	g->map.size.y = 0;
 	while (nb_bytes_read > 0)
 	{
 		nb_bytes_read = read(fd, &c, 1);
