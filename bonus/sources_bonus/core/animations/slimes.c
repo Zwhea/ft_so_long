@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   slimes.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 10:47:46 by twang             #+#    #+#             */
-/*   Updated: 2023/03/14 16:19:21 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/15 11:22:50 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void	animate_hurt_on_slimes(t_game *g, int frame)
 	else
 		display_img_in_map(g,
 			g->textures.link_idles_up_hurt[frame / 10000].sprite,
-			g->player.pos.y, g->player.pos.x);
+			g->player.pos.x, g->player.pos.y);
 }
 
 void	animate_static_slimes(t_game *g, int frame)

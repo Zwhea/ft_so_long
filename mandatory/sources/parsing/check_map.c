@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:51 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/13 17:41:33 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/15 14:06:39 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ static void	check_map_size_and_format(t_game *g)
 	int	size;
 
 	i = 0;
-	g->map.size.x = ft_strlen(g->map.map[0]);
-	while (g->map.map[i])
+	while (i < g->map.size.y)
 	{
 		size = ft_strlen(g->map.map[i]);
 		if (g->map.size.x != size)
@@ -102,7 +101,8 @@ static void	check_solvability(t_game *g)
 
 void	check_map(t_game *g)
 {
-	if (g->map.size.y == 0)
+	g->map.size.x = ft_strlen(g->map.map[0]);
+	if (g->map.size.y == 1 || g->map.size.x < 1)
 	{
 		display_map_format_error(g, no_map);
 		clean_map(g);

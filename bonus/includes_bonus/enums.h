@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   enums.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:17:29 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/14 16:29:27 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/15 10:46:59 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ enum e_map_error_code
 	right_border,
 	bottom_border,
 	left_border,
+	too_much_slimes,
 	unsolvable
 };
 

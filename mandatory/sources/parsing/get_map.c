@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_map.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:46 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/13 18:22:41 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/15 15:11:26 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ static int	get_allocation_size(t_game *g, const char *file)
 	fd = open_file(file);
 	nb_bytes_read = 1;
 	size = 0;
-	g->map.size.y = 1;
+	g->map.size.y = 0;
 	while (nb_bytes_read > 0)
 	{
 		nb_bytes_read = read(fd, &c, 1);
 		if (nb_bytes_read == -1)
 			read_error(fd);
-		if (c == '\n')
+		if (c == '\n' || !nb_bytes_read)
 			g->map.size.y++;
 		size++;
 	}

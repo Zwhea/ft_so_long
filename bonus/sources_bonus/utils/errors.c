@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:12:39 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 19:12:41 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/15 10:46:17 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ void	display_map_item_error(t_game *g, t_map_error_code error_code)
 		warn(VERBOSE_TOO_MUCH_EXIT);
 	else if (error_code == bad_char)
 		warn(VERBOSE_BAD_CHAR);
+	else if (error_code == too_much_slimes)
+		warn(VERBOSE_SLIMES);
 }
 
 void	display_map_wall_error(t_game *g, t_map_error_code error_code)

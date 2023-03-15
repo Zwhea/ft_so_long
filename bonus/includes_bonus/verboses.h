@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   verboses.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:14:59 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/08 19:15:00 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/15 11:30:20 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define VERBOSE_BOTTOM_BORDER "the bottom border of the map is uncomplete."
 # define VERBOSE_LEFT_BORDER "the left border of the map is uncomplete."
 # define VERBOSE_RIGHT_BORDER "the right border of the map is uncomplete."
+# define VERBOSE_SLIMES "the map might be unsolvable, too much enemies."
 # define VERBOSE_UNSOLVABLE "the map in unsolvable."
 
 #endif // VERBOSES_H
