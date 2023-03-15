@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    sources.mk                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+         #
+#    By: twang <twang@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/07 19:33:30 by wangthea          #+#    #+#              #
-#    Updated: 2023/03/08 20:24:06 by wangthea         ###   ########.fr        #
+#    Updated: 2023/03/15 17:39:24 by twang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SOURCES =	mandatory/sources/core/mouvements/move_down.c					\
 			mandatory/sources/textures/init.c								\
 			mandatory/sources/textures/items.c								\
 			mandatory/sources/textures/link.c								\
+			mandatory/sources/textures/secure.c								\
 			mandatory/sources/textures/walls.c								\
 			mandatory/sources/utils/errors.c								\
 			mandatory/sources/utils/mlx.c									\

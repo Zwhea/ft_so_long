@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:16:58 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/15 14:07:02 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/15 17:40:08 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,9 @@ void	init_xpm_items(t_game *g);
 
 // link.c
 void	init_xpm_link(t_game *g);
+
+// secure.c
+void	secure_textures(t_game *g);
 
 // walls.c
 void	init_xpm_walls(t_game *g);

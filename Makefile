@@ -6,7 +6,7 @@
 #    By: twang <twang@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 19:17:58 by wangthea          #+#    #+#              #
-#    Updated: 2023/03/15 15:32:09 by twang            ###   ########.fr        #
+#    Updated: 2023/03/15 16:51:46 by twang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -98,9 +98,16 @@ all:
 $(NAME): $(OBJECTS) $(LIBFT) $(MLX)
 	$(CC) $^ $(CFLAGS) $(MLX_FLAGS) -o $@
 
-$(OBJ_DIR)/%.o: %.c
+ifeq ($(BONUS), no)
+$(OBJ_DIR)/%.o: %.c $(HEADERS)
 	@ mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
+else 
+$(OBJ_DIR)/%.o: %.c $(HEADERS_BONUS)
+	@ mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c $< -o $@
+endif
+
 
 #--libs, debugs & bonus--------------------------------------------------------#
 

@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:15:06 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/13 12:46:58 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/15 18:47:19 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ struct s_textures
 {
 	t_sprite	walls[NB_SPRITES_WALL];
 	t_sprite	items[NB_SPRITES_ITEMS];
-	t_sprite	slime[NB_SPRITES_ITEMS];
+	t_sprite	slime[NB_SPRITES_LINK];
 	t_sprite	link[NB_SPRITES_LINK_ITEMS];
 	t_sprite	link_idles[NB_SPRITES_LINK];
 	t_sprite	link_idles_left[NB_SPRITES_LINK];

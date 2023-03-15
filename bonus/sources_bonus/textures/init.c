@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:08 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/10 20:43:27 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/15 18:12:27 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@ void	init_textures(t_game *g)
 	init_xpm_link(g);
 	init_xpm_slime(g);
 	init_xpm_walls(g);
+	secure_textures(g);
 }

@@ -6,7 +6,7 @@
 #    By: twang <twang@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/10 15:46:14 by twang             #+#    #+#              #
-#    Updated: 2023/03/13 16:58:22 by twang            ###   ########.fr        #
+#    Updated: 2023/03/15 18:35:52 by twang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SOURCES_BONUS =	bonus/sources_bonus/core/animations/init.c					\
 				bonus/sources_bonus/textures/clean.c						\
 				bonus/sources_bonus/textures/init.c							\
 				bonus/sources_bonus/textures/items.c						\
+				bonus/sources_bonus/textures/secure.c						\
 				bonus/sources_bonus/textures/slime.c						\
 				bonus/sources_bonus/textures/walls.c						\
 				bonus/sources_bonus/utils/errors.c							\

@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:15 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/13 17:19:18 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/15 18:55:01 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	clean_textures(t_game *g)
 		clean_link_textures(g, i);
 		if (i < NB_SPRITES_ITEMS && g->textures.items[i].sprite)
 			mlx_destroy_image(g->mlx, g->textures.items[i].sprite);
-		if (i < NB_SPRITES_ITEMS && g->textures.slime[i].sprite)
+		if (i < NB_SPRITES_LINK && g->textures.slime[i].sprite)
 			mlx_destroy_image(g->mlx, g->textures.slime[i].sprite);
 		if (g->textures.walls[i].sprite)
 			mlx_destroy_image(g->mlx, g->textures.walls[i].sprite);
