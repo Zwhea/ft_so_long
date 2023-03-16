@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+         #
+#    By: twang <twang@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 19:17:58 by wangthea          #+#    #+#              #
-#    Updated: 2023/03/15 19:57:28 by wangthea         ###   ########.fr        #
+#    Updated: 2023/03/16 14:48:15 by twang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ all:
 	$(MAKE) $(NAME)
 
 $(NAME): $(OBJECTS)
-	$(CC) $^ $(CFLAGS) $(MLX_FLAGS) $(LIBFT) $(MLX) -o $@
+	$(CC) $^ $(CFLAGS) $(LIBFT) $(MLX) -o $@ $(MLX_FLAGS)
 
 ifeq ($(BONUS), no)
 $(OBJ_DIR)/%.o: %.c $(HEADERS) $(LIBFT) $(MLX)
