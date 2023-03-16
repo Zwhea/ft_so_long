@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:28 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/13 13:29:57 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/16 15:57:43 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ void	init_mlx(t_game *g)
 		clean(g);
 	g->window = mlx_new_window(g->mlx, g->window_size.x, g->window_size.y, \
 		"so_long");
+	if (g->window == NULL)
+		clean(g);
 	init_textures(g);
 }
