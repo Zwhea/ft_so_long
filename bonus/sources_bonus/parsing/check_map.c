@@ -6,7 +6,7 @@
 /*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:51 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/15 15:42:08 by twang            ###   ########.fr       */
+/*   Updated: 2023/03/16 16:40:49 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ static void	check_map_size_and_format(t_game *g)
 		}
 		i++;
 	}
-	if (g->map.size.y < 3 || g->map.size.x < 5)
+	if (g->map.size.x < 3 && g->map.size.y < 5)
+		display_map_format_error(g, bad_size);
+	else if (g->map.size.y < 3 && g->map.size.x < 5)
 		display_map_format_error(g, bad_size);
 }
 
