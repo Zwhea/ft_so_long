@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: twang <twang@student.42.fr>                +#+  +:+       +#+         #
+#    By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 19:17:58 by wangthea          #+#    #+#              #
-#    Updated: 2023/03/15 16:51:46 by twang            ###   ########.fr        #
+#    Updated: 2023/03/15 19:57:28 by wangthea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,15 +95,15 @@ all:
 	$(MAKE) libs
 	$(MAKE) $(NAME)
 
-$(NAME): $(OBJECTS) $(LIBFT) $(MLX)
-	$(CC) $^ $(CFLAGS) $(MLX_FLAGS) -o $@
+$(NAME): $(OBJECTS)
+	$(CC) $^ $(CFLAGS) $(MLX_FLAGS) $(LIBFT) $(MLX) -o $@
 
 ifeq ($(BONUS), no)
-$(OBJ_DIR)/%.o: %.c $(HEADERS)
+$(OBJ_DIR)/%.o: %.c $(HEADERS) $(LIBFT) $(MLX)
 	@ mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 else 
-$(OBJ_DIR)/%.o: %.c $(HEADERS_BONUS)
+$(OBJ_DIR)/%.o: %.c $(HEADERS_BONUS) $(LIBFT) $(MLX)
 	@ mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 endif
@@ -144,5 +144,5 @@ norm:
 
 #--PHONY-----------------------------------------------------------------------#
 
-.PHONY: all libs debug bonus re clean fclean norme
+.PHONY: all libs debug bonus re clean fclean norm
  
