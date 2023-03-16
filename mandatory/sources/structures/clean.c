@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   clean.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wangthea <wangthea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: twang <twang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:13:34 by wangthea          #+#    #+#             */
-/*   Updated: 2023/03/15 19:48:04 by wangthea         ###   ########.fr       */
+/*   Updated: 2023/03/16 16:14:55 by twang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	clean(t_game *g)
 	clean_textures(g);
 	if (g->window)
 		mlx_destroy_window(g->mlx, g->window);
-	// mlx_destroy_display(g->mlx);
+	if (g->mlx)
+		mlx_destroy_display(g->mlx);
 	free(g->mlx);
 	exit(0);
 }
